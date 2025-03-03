@@ -14,7 +14,8 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: mschilde/auto-label-merge-conflicts@master
+      - name: Check for merge conflict
+        uses: mschilde/auto-label-merge-conflicts@master
         with:
           CONFLICT_LABEL_NAME: "has conflicts"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
